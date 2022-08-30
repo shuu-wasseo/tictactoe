@@ -3,6 +3,17 @@ def twoplayer():
   win = False # status of whether game is over or not
   playerid = 0 # playerid % 2 -> identity of player
   playerletter = "o" # letter player uses
+  tttictacboard = {
+    "a1" : 0,
+    "a2" : 1,
+    "a3" : 2,
+    "b1" : 3,
+    "b2" : 4,
+    "b3" : 5,
+    "c1" : 6,
+    "c2" : 7,
+    "c3" : 8
+  } # ttt values vs tictacboard values
   ttt = "         " # argument for tictacboard()
   
   # loop until someone wins
@@ -28,12 +39,7 @@ def twoplayer():
         break
     
     # add into ttt
-    if playstr[0] == "a":
-      ttt = ttt[:int(playstr[1]) - 1] + playerletter + ttt[int(playstr[1]):]
-    elif playstr[0] == "b":
-      ttt = ttt[:int(playstr[1]) + 2] + playerletter + ttt[int(playstr[1]) + 3:]
-    elif playstr[0] == "c":
-      ttt = ttt[:int(playstr[1]) + 5] + playerletter + ttt[int(playstr[1]) + 6:]
+    ttt = ttt[:tttictactoe.get(playstr)] + playerletter + tttictactoe.get(playstr)+1:]
       
     # check for win
     threeinrow = ["012", "345", "678", "036", "147", "258", "048", "246"] # possible rows
