@@ -1,4 +1,5 @@
-from functions import tictacboard, twoplayer
+from twoplayer import twoplayer
+from tictacboard import tictacboard
 
 # main selection screen
 while 1:
