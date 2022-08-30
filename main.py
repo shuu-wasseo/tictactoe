@@ -1,17 +1,15 @@
 # prints a tic-tac-toe board, board takes a string argument filled with characters "o", "x" and " "
 def tictacboard(oxb):
-  board = f"""
-  a     b     c
+  board = f"""   1     2     3
       |     |     
-1  {oxb[0]}  |  {oxb[1]}  |  {oxb[2]}  
+a  {oxb[0]}  |  {oxb[1]}  |  {oxb[2]}  
  _____|_____|_____
       |     |     
-2  {oxb[3]}  |  {oxb[4]}  |  {oxb[5]}  
+b  {oxb[3]}  |  {oxb[4]}  |  {oxb[5]}  
  _____|_____|_____
       |     |     
-3  {oxb[6]}  |  {oxb[7]}  |  {oxb[8]}  
-      |     |     
-"""
+c  {oxb[6]}  |  {oxb[7]}  |  {oxb[8]}  
+      |     |     """
   return board
 
 # 2-player mode
@@ -25,7 +23,9 @@ def twoplayer():
   while win == False:
     
     # print board
+    print("------------------")
     print(tictacboard(ttt))
+    print("------------------")
     
     # player identity
     if playerid % 2 == 0:
@@ -43,15 +43,25 @@ def twoplayer():
     
     # add into ttt
     if playstr[0] == "a":
-      ttt[int(playstr[1])] == playerletter
+      ttt = ttt[:int(playstr[1]) - 1] + playerletter + ttt[int(playstr[1]):]
     elif playstr[0] == "b":
-      ttt[3 + int(playstr[1])] == playerletter
+      ttt = ttt[:int(playstr[1]) + 2] + playerletter + ttt[int(playstr[1]) + 3:]
     elif playstr[0] == "c":
-      ttt[6 + int(playstr[1])] == playerletter
+      ttt = ttt[:int(playstr[1]) + 5] + playerletter + ttt[int(playstr[1]) + 6:]
       
     # check for win
     threeinrow = ["012", "345", "678", "036", "147", "258", "048", "246"] # possible rows
     for x in threeinrow: #checks for every row combination
-      if ttt[int(x[0])] == ttt[int(x[1])] and ttt[int(x[1])] == ttt[int(x[2])]:
-        print("winner: " + ttt[int(x[0])])
-        win == True
+      if ttt[int(x[0])] != " " and ttt[int(x[0])] == ttt[int(x[1])] and ttt[int(x[1])] == ttt[int(x[2])]:
+        print("\nwinner: " + ttt[int(x[0])])
+        win = True
+        break
+
+    playerid += 1
+    print("\n")
+
+# main selection screen
+while 1:
+  playnow = input("enter '2player' to enter a 2-player game. \n")
+  if playnow == "2player":
+    twoplayer()
