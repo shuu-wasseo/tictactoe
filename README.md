@@ -3,4 +3,5 @@
 
 so here we are.
 
-note: 1player mode is not done yet.
+credits:
+[wikihow - how to play tic-tactoe](https://www.wikihow.com/Play-Tic-Tac-Toe) (used in [human vs. computer mode](https://github.com/shuu-wasseo/tictactoe/blob/main/oneplayer.py))
