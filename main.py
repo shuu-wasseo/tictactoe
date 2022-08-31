@@ -1,7 +1,7 @@
 sys.path.insert(0, './functions')
 
+from oneplayer import oneplayer
 from twoplayer import twoplayer
-from tictacboard import tictacboard
 
 # main selection screen
 while 1:
