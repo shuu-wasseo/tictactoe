@@ -4,4 +4,4 @@
 so here we are.
 
 credits:
-[wikihow - how to play tic-tactoe](https://www.wikihow.com/Play-Tic-Tac-Toe) (used in [human vs. computer mode](https://github.com/shuu-wasseo/tictactoe/blob/main/oneplayer.py))
+[wikihow - how to play tic-tac-toe](https://www.wikihow.com/Play-Tic-Tac-Toe) (used in [human vs. computer mode](https://github.com/shuu-wasseo/tictactoe/blob/main/oneplayer.py))
