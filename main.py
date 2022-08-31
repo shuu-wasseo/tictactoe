@@ -1,3 +1,5 @@
+sys.path.insert(0, './functions')
+
 from twoplayer import twoplayer
 from tictacboard import tictacboard
 
