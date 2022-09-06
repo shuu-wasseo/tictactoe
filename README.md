@@ -1,3 +1,7 @@
+![](https://progress-bar.dev/95/?title=completed)
+
+note: this repo is still untested and may not work as expected / may not work at all.
+
 # tictactoe
 > "what about python for a simple game like tic tac toe... once done with 2 player mode, make a very simple opponent with conditional rules" ~my uncle
 
